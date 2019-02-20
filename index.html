@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <title>Circumference Calculator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -13,20 +13,12 @@
 </head>
 
 <body>
-  <main class="container-fluid">
+  <main class="Circumference Calculator">
 
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
-    </p>
-
-    <p>Enter first number:
-      <input id="firstNumber" type="number" value="7">
-    </p>
-
-    <p>Enter second number:
+    <p>Enter Radius:
       <input id="secondNumber" type="number" value="12">
     </p>
 
@@ -41,20 +33,18 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function area(y) {
+      return 2 * y * Math.PI;
     }
-    console.log('Defined add=' + add)
+    console.log('Defined add=' + area)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
-      console.log('i=' + i)
+     
       const j = parseInt(document.getElementById('secondNumber').value)
       console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
+      const ans = ',CIRCUMFERENCE is ' + area(j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
